@@ -17,6 +17,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
+" vim and tmux navigation
+Plugin 'christoomey/vim-tmux-navigator'
+
+" vim code dark colorscheme
+Plugin 'tomasiser/vim-code-dark'
+
+" tender color scheme
+Plugin 'jacoborus/tender.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -169,6 +178,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
+colorscheme codedark 
 set background=dark
 
 " Set extra options when running in GUI mode

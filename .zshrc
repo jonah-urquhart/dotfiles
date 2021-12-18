@@ -70,10 +70,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
-# plugins=(zsh-autosuggestions colorize)
-
-ZSH_TMUX_AUTOSTART=true
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # makes hitting ESC instant
 export KEYTIMEOUT=1
 
-alias vimf='vim $(fzf)'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
