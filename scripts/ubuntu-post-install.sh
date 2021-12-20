@@ -30,4 +30,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # copy over dotfiles
-cp -r ~/repos/dotfiles/* ~
+cd ~/repos/dotfiles && cp -r . ~
