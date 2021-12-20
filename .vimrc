@@ -23,9 +23,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 " vim code dark colorscheme
 Plugin 'tomasiser/vim-code-dark'
 
-" tender color scheme
-Plugin 'jacoborus/tender.vim'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,7 +67,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn on line number
-set nu
+set number relativenumber
 
 " Custom netrw settings
 let g:netrw_banner=0
@@ -178,7 +175,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-colorscheme codedark 
+colorscheme peaksea 
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -244,7 +241,7 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+map <leader>t<leader> :tabnext<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -289,8 +286,6 @@ map 0 ^
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
