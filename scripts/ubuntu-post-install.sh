@@ -19,15 +19,14 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # create some basic directories
 cd ~ && mkdir dev && mkdir repos && mkdir sandbox
 
-# clone dotfiles
-cd ~/repos && git clone https://github.com/jonah-urquhart/dotfiles.git
-
 # clone and install latest fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # clone and install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# TODO: install rg by adding ppa
 
 # copy over dotfiles
 cd ~/repos/dotfiles && cp -r . ~

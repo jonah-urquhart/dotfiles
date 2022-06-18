@@ -20,8 +20,8 @@ Plugin 'junegunn/fzf.vim'
 " vim and tmux navigation
 Plugin 'christoomey/vim-tmux-navigator'
 
-" vim code dark colorscheme
-Plugin 'tomasiser/vim-code-dark'
+" code complete
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -161,7 +161,7 @@ set t_vb=
 set tm=500
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+" set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,8 +175,8 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-colorscheme peaksea 
-set background=dark
+" colorscheme peaksea 
+" set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")

@@ -100,6 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias python=python3
+alias vim=nvim
+
 # 10ms for key sequences
 # makes hitting ESC instant
 export KEYTIMEOUT=1
