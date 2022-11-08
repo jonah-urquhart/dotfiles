@@ -76,7 +76,8 @@ let g:netrw_liststyle=3
 " Side-by-side diff
 set diffopt=vertical
 
-
+nnoremap j gj
+nnoremap k gk
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -247,7 +248,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext<cr>
+map <leader>m :tabnext<cr>
+map <leader>n :tabprevious<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -303,7 +305,7 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp,*.h :call CleanExtraSpaces()
 endif
 
 
@@ -326,6 +328,8 @@ map <leader>s? z=
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" Toggle line wrapping
+map <leader>ll :set wrap!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
