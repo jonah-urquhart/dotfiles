@@ -105,7 +105,7 @@ unset LESS
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias python=python3
-alias vim=nvim
+# alias vim=nvim
 
 # 10ms for key sequences
 # makes hitting ESC instant
